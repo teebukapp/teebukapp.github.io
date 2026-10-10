@@ -1,0 +1,68 @@
+/* Teebuk's public pages — the app's look: sand ground, ink, brand green.
+   Rubik for Latin, Mitr for Thai, both from Google Fonts. No scripts. */
+:root {
+  --ground: #efebe0;
+  --surface: #f8f6f0;
+  --ink: #1a1c16;
+  --ink2: #4a4c44;
+  --muted: #6e6f66;
+  --rule: rgba(26, 28, 22, 0.13);
+  --accent: #22a44c;
+  --accent-ink: #157a36;
+  --radius: 18px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #111113;
+    --surface: #1b1b1e;
+    --ink: #f1efe4;
+    --ink2: #c9c7bc;
+    --muted: #9a998f;
+    --rule: rgba(241, 239, 228, 0.12);
+    --accent: #4ccb77;
+    --accent-ink: #4ccb77;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: "Rubik", "Mitr", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.6;
+}
+:lang(th) body, body:lang(th), section[lang="th"] { font-family: "Mitr", "Rubik", system-ui, sans-serif; font-weight: 300; line-height: 1.75; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 24px 20px 64px; }
+header.top {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--rule); margin-bottom: 28px;
+}
+.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 500; font-size: 20px; }
+.brand img { width: 36px; height: 36px; border-radius: 9px; background: #efebe0; }
+.lang { font-size: 15px; color: var(--muted); }
+.lang a { color: var(--accent-ink); }
+h1 { font-size: 34px; line-height: 1.2; font-weight: 600; margin: 0 0 6px; letter-spacing: 0; }
+:lang(th) h1 { font-weight: 500; line-height: 1.35; }
+.effective { color: var(--muted); font-size: 15px; margin: 0 0 28px; }
+h2 { font-size: 21px; line-height: 1.35; font-weight: 600; margin: 36px 0 8px; }
+:lang(th) h2 { font-weight: 500; }
+p, li { color: var(--ink2); }
+ul { padding-left: 1.2em; }
+li { margin: 4px 0; }
+strong { color: var(--ink); font-weight: 500; }
+a { color: var(--accent-ink); text-underline-offset: 3px; }
+.card {
+  background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius);
+  padding: 18px 20px; margin: 20px 0;
+}
+.card p { margin: 6px 0; }
+.links { display: grid; gap: 10px; margin: 24px 0; padding: 0; list-style: none; }
+.links a {
+  display: block; padding: 16px 18px; background: var(--surface); border: 1px solid var(--rule);
+  border-radius: var(--radius); text-decoration: none; color: var(--ink); font-weight: 500;
+}
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 14px; }
+footer a { color: var(--muted); }
