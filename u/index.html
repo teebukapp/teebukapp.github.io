@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Teebuk profile</title>
+<link rel="icon" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="../"><img src="../assets/teebuk-mark.png" alt="">Teebuk</a>
+</header>
+
+<h1 id="who">A Teebuk profile</h1>
+<p class="effective">Open it in the Teebuk app to follow. · <span lang="th">เปิดในแอป Teebuk เพื่อกดติดตาม</span></p>
+
+<p><a id="open" class="button" href="teebuk://u/">Open in Teebuk · เปิดใน Teebuk</a></p>
+
+<div class="card">
+  <p><strong>No Teebuk yet?</strong> Install it, sign in, then search this @handle in People.</p>
+  <p lang="th"><strong>ยังไม่มี Teebuk?</strong> ติดตั้งแอปแล้วเข้าสู่ระบบ จากนั้นค้นหา @handle นี้ในหน้านักกอล์ฟ</p>
+</div>
+
+<footer>
+  <a href="../privacy/">Privacy Policy</a> · <a href="../support/">Help</a> · <a href="../th/privacy/" lang="th">นโยบายความเป็นส่วนตัว</a>
+</footer>
+</div>
+<!-- The only script on this site: reads ?h= and fills in the handle. No tracking. -->
+<script>
+(function () {
+  var h = (new URLSearchParams(location.search).get('h') || '').replace(/^@/, '').toLowerCase();
+  if (!/^[a-z0-9_]{3,20}$/.test(h)) return;
+  document.getElementById('who').textContent = '@' + h;
+  document.getElementById('open').setAttribute('href', 'teebuk://u/' + h);
+})();
+</script>
+</body>
+</html>

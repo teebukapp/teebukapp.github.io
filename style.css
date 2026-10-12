@@ -1,5 +1,5 @@
 /* Teebuk's public pages — the app's look: sand ground, ink, brand green.
-   Rubik for Latin, Mitr for Thai, both from Google Fonts. No scripts. */
+   Rubik for Latin, Mitr for Thai, both from Google Fonts. */
 :root {
   --ground: #efebe0;
   --surface: #f8f6f0;
@@ -66,3 +66,7 @@ a { color: var(--accent-ink); text-underline-offset: 3px; }
 }
 footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 14px; }
 footer a { color: var(--muted); }
+.button {
+  display: inline-block; padding: 14px 22px; border-radius: var(--radius);
+  background: var(--ink); color: var(--ground); text-decoration: none; font-weight: 500;
+}
