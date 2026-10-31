@@ -74,3 +74,4 @@ footer a { color: var(--muted); }
   display: inline-block; padding: 14px 22px; border-radius: var(--radius);
   background: var(--ink); color: var(--ground); text-decoration: none; font-weight: 500;
 }
+.nw { white-space: nowrap; }
