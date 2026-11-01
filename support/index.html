@@ -37,13 +37,13 @@
 
 <h2>Common questions</h2>
 
-<p><strong>How is my handicap index calculated?</strong><br>
+<p id="handicap"><strong>How is my handicap index calculated?</strong><br>
 Teebuk follows the method published by the World Handicap System. Each eligible round gives a score differential. Once you have three, your index is worked out from your best differentials among your most recent 20 rounds. A round counts when it is a complete 18-hole round on a course whose rating, slope, pars and stroke indexes are in Teebuk. Some course ratings in Teebuk are estimates (see the <a href="../terms/">Terms</a>); a round on such a course still counts, and the app marks that differential as an estimate. Nine-hole rounds are saved but do not count yet.</p>
 
-<p><strong>Can I score without signal?</strong><br>
+<p id="offline"><strong>Can I score without signal?</strong><br>
 Yes. Rounds are saved on your phone as you play and sync when you are back online. Keep the app installed and signed in until they have synced.</p>
 
-<p><strong>A course is missing, or its card is wrong.</strong><br>
+<p id="course"><strong>A course is missing, or its card is wrong.</strong><br>
 Email us the course name and, if you can, a photo of its scorecard. We add and correct courses from real scorecards.</p>
 
 <p><strong>I have a new phone.</strong><br>
@@ -66,6 +66,55 @@ Tap ⋯ beside the comment. <strong>Delete</strong> removes your own comment, or
 
 <p><strong>How do I change who can see a round?</strong><br>
 Open the round from “Recent rounds” on Home (or All → “Your rounds”) and choose Private or Followers under “Who can see it”. During a round, the round menu’s “Round options” has the same choice, and the length (18, front 9 or back 9) until the round is finished.</p>
+
+<h2 id="side-games">Side game rules</h2>
+<p>Teebuk works out three side games from your card: Match play, Skins and Best 1 · 2v2 teams. Pick them when you set up a round. You can change them in the round menu’s “Round options” until anyone enters a score or a pick-up; after that they are fixed.</p>
+
+<h3 id="gross-net">Gross or net</h3>
+<p>One choice covers every game on the card. Gross is the default. Gross uses the strokes as entered. In a net game, a player’s score on a hole is their strokes minus the strokes they get there.</p>
+<p>Each player gets strokes from their own full course handicap; strokes are not worked out from the difference in handicaps. Yours comes from your handicap index and the tee’s slope, course rating and par. For everyone else, it is the course handicap you enter when you add them.</p>
+<p>Strokes go on the hardest holes first, by stroke index: one a hole, from index 1 up to the handicap. When the handicap is more than the number of holes in the round, the strokes go round again: every hole gets one, then the hardest holes get a second, and so on. A plus handicap works the other way: strokes are added to the score, starting on the easiest hole. On a nine-hole round, each course handicap is halved and rounded, and the strokes go on that nine’s hardest holes first.</p>
+<p>Net needs the course’s stroke index for every hole and the tee’s par, your handicap index, and a course handicap for every other player on the card. If one is missing, Net is not offered and the app says what is missing. Gross needs none of these.</p>
+
+<h3 id="match-play">Match play</h3>
+<ul>
+  <li>One against one, for exactly two players on the card when you choose it. With three or four on the card, it is not offered. If you add a player later, the match stays between the same two.</li>
+  <li>The lower score wins the hole (the net score in a net match). The same score ties it.</li>
+  <li>A pick-up loses the hole to a player with a score, whatever the strokes. If both pick up, the hole is tied.</li>
+  <li>A hole where either player has nothing entered (no score and no pick-up) is not played yet: it cannot move the match or end it.</li>
+  <li>The match ends as soon as one player is up by more holes than are left to play. Holes with nothing entered still count as left to play. Holes after the match ends are not part of it.</li>
+  <li>“3 &amp; 2” means three up with two to play. If every hole is played, a match that reaches the last hole ends “1 up” or “2 up”, or “All square” if it is level.</li>
+  <li>During the round you see a line like “You — 2 up, 6 to play” or “Level, 6 to play”; the result reads like “Nut won 3 &amp; 2”. If the round ends with the match still open because holes have no score, it says “This match was never decided — 3 holes have no score.”</li>
+</ul>
+
+<h3 id="skins">Skins</h3>
+<ul>
+  <li>Everyone on the card plays; it needs at least two. A player added during the round joins in too.</li>
+  <li>Each hole is worth one skin, and the one lowest score wins it (the net score in net skins).</li>
+  <li>If two or more tie for lowest and “Carry a tied hole over” is on, the skin carries to the next hole, which is then worth two, and so on until one player wins a hole. Carry is on unless you turn it off. With carry off, nobody wins a tied skin.</li>
+  <li>A player who picks up is out of that hole, and the others still play for it. If everyone picks up, the hole is tied.</li>
+  <li>If anyone on the card has nothing entered on a hole (no score and no pick-up), nobody wins it: the skin carries when carry is on, and is not won when it is off. So if you add a player during the round, the holes already played have no winner while that player has nothing entered on them, even holes someone had already won.</li>
+  <li>The result shows each player’s skins and the holes they won, the tied holes, and how many skins were not won. During the round the app shows how many skins are carrying to the next hole; any still carrying when the round ends are not won.</li>
+</ul>
+
+<h3 id="best-1">Best 1 · 2v2 teams</h3>
+<ul>
+  <li>Two against two, for exactly four players on the card. You choose your partner, and the other two make the other team. Nothing is chosen for you, and the round will not start until you choose.</li>
+  <li>On each hole, a team’s score is the better of its two scores (net in a net game). The lower team score wins the hole and 1 point. If the team scores are the same, neither team gets a point and nothing carries.</li>
+  <li>Turbo holes multiply that point: a ×2 hole is worth 2 points and a ×3 hole 3. Pick them at setup on any holes the round plays, as many as you like: tap a hole once for ×2, again for ×3, and again to turn it off. There are no turbo holes unless you choose them, and a turbo hole the round no longer plays earns nothing.</li>
+  <li>A player who picks up does not count on that hole, so the team counts the partner’s score. If both on a team pick up, that team loses the hole to a team with a score. If all four pick up, the hole is tied.</li>
+  <li>A hole counts only when all four have a score or a pick-up. Until then it scores nothing, and the result lists it as not counted.</li>
+  <li>The result is the gap in points, like “You+Beam won by 3”: each player on the winning team gets +3 and each on the other team −3. A level finish reads “Level — no points either way”.</li>
+</ul>
+
+<h3 id="cant-count">When a game can’t be counted</h3>
+<p>The app says why instead of showing a result, and the one reason holds back every side game on the card.</p>
+<ul>
+  <li>In a net game every player needs a handicap, so adding a player with no handicap during the round stops the games.</li>
+  <li>Removing the other player in a match, or any of the other three in Best 1, stops the games: “A player in a side game is no longer on the card, so the side games cannot be settled.” With Best 1 as the only game, it says “Best 1 can’t be counted — a player left the round.”</li>
+  <li>Removing a player who is in skins only, not in a match or Best 1, stops nothing: skins goes on with the players left, as long as two remain. With fewer than two, skins stops too.</li>
+  <li>The app never picks a new partner or a new match by itself. Before the first score you can set the games again in Round options; once a score is in, they stay as they are and the app shows the reason instead of a result.</li>
+</ul>
 
 <footer>
   <a href="../privacy/">Privacy Policy</a> · <a href="../terms/">Terms of Use</a> · <a href="../th/support/" lang="th">ภาษาไทย</a>
